@@ -10,7 +10,7 @@
     "test"
   ],
   "dependencies": {
-    "o-useragent": ">= 1.0.0 <2",
+    "o-useragent": ">=1.0.0 <3",
     "o-colors": "^2.3.16",
     "o-fonts": ">=0.7.0 <2",
     "o-assets": "^0.4.2",
