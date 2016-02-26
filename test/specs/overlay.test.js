@@ -189,7 +189,7 @@ describe('smoke-tests (./overlay.js)', function() {
 
 	it('should be able to inject content from a url', function(done) {
 		var mod = new Overlay('testOverlay', {
-			src: 'http://build.origami.ft.com/files/o-tweet@0.2.5/demos/demo.html',
+			src: 'http://build.origami.ft.com/v2/files/o-tweet@0.2.5/demos/demo.html',
 			trigger: document.querySelector('.o-overlay-trigger')
 		});
 		mod.open();
