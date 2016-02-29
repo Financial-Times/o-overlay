@@ -1,5 +1,3 @@
-'use strict';
-
 const oOverlay = require('./src/js/overlay');
 const constructAll = function() {
 	oOverlay.init();

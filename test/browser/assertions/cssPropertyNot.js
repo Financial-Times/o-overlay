@@ -14,7 +14,6 @@
  * @param {string} [message] Optional log message to display in the output. If missing, one is displayed by default.
  * @api assertions
  */
-'use strict';
 
 const util = require('util');
 exports.assertion = function(selector, cssProperty, expected, msg) {

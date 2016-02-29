@@ -1,5 +1,3 @@
-"use strict";
-
 const timeout = 20000;
 
 module.exports = {

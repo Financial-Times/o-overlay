@@ -1,4 +1,3 @@
-'use strict';
 const util = require('util');
 
 exports.assertion = function(selector, cssProperty, expected1, expected2, msg) {

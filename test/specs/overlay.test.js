@@ -1,6 +1,4 @@
 /* global require, afterEach, beforeEach, describe, it, expect, spyOn */
-'use strict';
-
 const o = require('../helpers/events');
 let Overlay;
 const testContent = '<div class="test-overlay"><span class="test-overlay__text">Hello Overlay</span></div>';

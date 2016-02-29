@@ -1,5 +1,3 @@
-'use strict';
-
 const nativeNonBubblers = ['error', 'blur', 'focus', 'scroll', 'resize'];
 
 const fireEvent = function (el, event, data) {

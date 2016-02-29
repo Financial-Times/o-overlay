@@ -1,5 +1,3 @@
-'use strict';
-
 const Delegate = require('ftdomdelegate');
 const viewport = require('o-viewport');
 const oLayers = require('o-layers');
