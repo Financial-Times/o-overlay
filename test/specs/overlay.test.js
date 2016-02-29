@@ -1,6 +1,6 @@
 /* global require, afterEach, beforeEach, describe, it, expect, spyOn */
 const o = require('../helpers/events');
-let Overlay;
+var Overlay;
 const testContent = '<div class="test-overlay"><span class="test-overlay__text">Hello Overlay</span></div>';
 
 describe('smoke-tests (./overlay.js)', function() {
@@ -11,7 +11,7 @@ describe('smoke-tests (./overlay.js)', function() {
 	afterEach(function() {
 		Overlay.destroy();
 		const overlays = document.querySelectorAll('.o-overlay, .o-overlay-shadow');
-		for (let i = 0; i < overlays.length; i++) {
+		for (var i = 0; i < overlays.length; i++) {
 			overlays[i].parentNode.removeChild(overlays[i]);
 		}
 	});
@@ -154,7 +154,7 @@ describe('smoke-tests (./overlay.js)', function() {
 			});
 			mod.open();
 
-			let overlays = document.querySelectorAll('.o-overlay');
+			var overlays = document.querySelectorAll('.o-overlay');
 
 			expect(overlays.length).toBe(1);
 			mod.close();
@@ -177,7 +177,7 @@ describe('smoke-tests (./overlay.js)', function() {
 		});
 		mod.open();
 
-		let overlays = document.querySelectorAll('.o-overlay');
+		var overlays = document.querySelectorAll('.o-overlay');
 		expect(overlays.length).toBe(1);
 		mod.close();
 		overlays = document.querySelectorAll('.o-overlay');
@@ -193,7 +193,7 @@ describe('smoke-tests (./overlay.js)', function() {
 		mod.open();
 
 		mod.context.addEventListener('oOverlay.ready', function() {
-			let overlays = document.querySelectorAll('.o-overlay');
+			var overlays = document.querySelectorAll('.o-overlay');
 			expect(overlays.length).toBe(1);
 
 			expect(mod.content.innerHTML).toContain('<div class="o-tweet__h-card">');

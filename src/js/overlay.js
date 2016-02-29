@@ -59,7 +59,7 @@ const checkOptions = function(opts) {
 };
 
 const getOptionsFromTrigger = function(trigger) {
-	let opts = {};
+	var opts = {};
 	// Get config from data attributes set in the trigger if they haven't been passed via JS
 	if (trigger instanceof HTMLElement) {
 		Array.prototype.forEach.call(trigger.attributes, function(attr) {
@@ -375,7 +375,7 @@ Overlay.prototype.respondToWindow = function(size) {
 		const oppositeEdge = (this.opts.arrow.currentposition === 'left' || this.opts.arrow.currentposition === 'right') ? 'top' : 'left';
 		const dimension = (this.opts.arrow.currentposition === 'left' || this.opts.arrow.currentposition === 'right') ? 'height' : 'width';
 
-		let offset = 0;
+		var offset = 0;
 		// Protrusion distance for the arrow. It's 13 due to the border around it
 		const arrowSize = 13;
 		const targetClientRect = utils.getOffsetRect(this.opts.arrow.target);
@@ -473,7 +473,7 @@ Overlay.init = function(el) {
 		el = document.querySelector(el);
 	}
 	const triggers = el.querySelectorAll('.o-overlay-trigger');
-	for (let t = 0; t < triggers.length; t++) {
+	for (var t = 0; t < triggers.length; t++) {
 		// There can only be one overlay per trigger when set declaratively, so the first trigger found for a given overlay will be the one used to create the overlay
 		if (!overlays[triggers[t].getAttribute('data-o-overlay-id')]) {
 			new Overlay(triggers[t].getAttribute('data-o-overlay-id'), getOptionsFromTrigger(triggers[t]));
