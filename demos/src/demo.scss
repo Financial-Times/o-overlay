@@ -2,9 +2,9 @@ $o-overlay-is-silent: false;
 @import "../../main";
 
 body {
+	font-family: MetricWeb;
+	padding: 10px;
 }
-
-
 
 .demo-overlay-container {
 	height: 220px;
@@ -15,8 +15,4 @@ body {
 	line-height: 18px;
 	-webkit-font-smoothing: antialiased;
 	font-family: MetricWeb;
-
-	strong {
-		font-weight:600
-	}
 }

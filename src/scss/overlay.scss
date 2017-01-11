@@ -37,14 +37,14 @@
 	overflow: hidden;
 	background: oColorsGetColorFor(o-overlay-heading, background);
 	color: oColorsGetColorFor(o-overlay-heading, text);
-	font-weight: bold;
+	font-weight: 600;
 }
 
 /// Base overlay title style
 @mixin oOverlayTitle {
 	margin: 10px 10px 10px 20px;
 	display: block;
-	line-height: 20px;
+	line-height: 23px; //Magic number to make this line up with the close button
 	overflow: auto;
 }
 
