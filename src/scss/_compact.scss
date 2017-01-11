@@ -5,7 +5,7 @@
 
 /// Add to the header for a compact overlay
 @mixin oOverlayCompactHeading {
-	font-size: 12px;
+	font-size: 16px;
 }
 
 /// Add to the title for a compact overlay
@@ -18,10 +18,10 @@
 
 /// Add to the close button for a compact overlay
 @mixin oOverlayCompactClose {
-	margin: 5px 5px 5px 10px;
+	margin: 5px 5px 0px 10px;
 }
 
 /// Add to the content section for a compact overlay
 @mixin oOverlayCompactContent {
-	padding: 10px;
+	padding: 0px 10px 10px;
 }
