@@ -5,7 +5,6 @@
 
 /// Add to the header for a shaded overlay
 @mixin oOverlayHeadingShaded {
-	background: oColorsGetColorFor(o-overlay-heading-shaded, background);
 	color: oColorsGetColorFor(o-overlay-heading-shaded, text);
 	font-weight: normal;
 }
@@ -25,6 +24,5 @@
 	&:focus,
 	#{$o-hoverable-if-hover-enabled} &:hover {
 		@include _oOverlayCloseIcon(oColorsGetColorFor(o-overlay-close, text));
-		background-color: oColorsGetColorFor(o-overlay-close, background);
 	}
 }
