@@ -58,7 +58,7 @@ var myOverlay = new Overlay('myOverlay', {
 * `src`: String. Either a _url_ from which HTML to populate the overlay can be loaded, or a querySelector string identifying an element from which the textContent should be extracted.
 * `html`: String or HTMLElement.  Raw HTML (cannot be set declaratively)
 * `trigger`: String or HTMLElement. querySelector expression or HTMLElement. When there's a trigger set, a click event handler will be added to it that will open or close the overlay accordingly. (cannot be set declaratively)
-* `zindex`: String. Value of the CSS z-index property of the overlay. _Default set via CSS_: '10'
+* `zindex`: String. Value of the CSS z-index property of the overlay. _Default set via CSS_: '150'
 * `preventclosing`: Boolean. Prevents closure of overlay via standard x button or escape key. For use when you are directing the user to somewhere else. Only valid with modal set to true.
 * `customclose`: Boolean. If you do not use the header, but want to provide a close button in your html / src (with a class of `o-overlay__close`), setting customclose to true will attach o-overlay's close handler function to that button.
 * `parentnode`: String. Should be a query selector for a DOM element. If set, the overlay will be appended as a child of this rather than the document body or target. If multiple nodes are matched, it will use the first. If nothing matches this selector, the `body` will be used.

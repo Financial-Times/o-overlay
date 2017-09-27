@@ -6,7 +6,7 @@
 /// Base overlay style
 @mixin oOverlay {
 	position: fixed;
-	z-index: 10;
+	z-index: 150;
 	box-sizing: border-box;
 	opacity: 1;
 	transition: opacity 0.3s ease-in-out;
@@ -27,7 +27,7 @@
 	width: 100%;
 	top: 0;
 	left: 0;
-	z-index: 10;
+	z-index: 150;
 	opacity: 1;
 	transition: opacity 0.3s ease-in-out;
 }
