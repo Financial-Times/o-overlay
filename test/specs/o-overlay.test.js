@@ -17,7 +17,7 @@ describe("Overlay", () => {
 			fixtures.reset();
 			Object.values(Overlay.getOverlays()).forEach(overlay => {
 				overlay.destroy();
-			});;
+			});
 		});
 
 		it("Adds itself to the overlays array", () => {
