@@ -15,7 +15,9 @@ describe("Overlay", () => {
 
 		afterEach(() => {
 			fixtures.reset();
-			Overlay.destroy();
+			Object.values(Overlay.getOverlays()).forEach(overlay => {
+				overlay.destroy();
+			});;
 		});
 
 		it("Adds itself to the overlays array", () => {
@@ -108,8 +110,8 @@ describe("Overlay", () => {
 			proclaim.isNull(history.state);
 		});
 
-		it("Does not disable document scrolling when not in full screen mode.", (done) => {
-			const testOverlay = new Overlay('myID', { html: 'hello' });
+		it("Does not disable document scrolling when not in full screen or modal mode.", (done) => {
+			const testOverlay = new Overlay('myID', { html: 'hello', fullscreen: false, modal: false });
 			testOverlay.open();
 			setTimeout(() => {
 				proclaim.equal('', document.body.style.overflow);
@@ -136,6 +138,13 @@ describe("Overlay", () => {
 
 			}
 			window.history.back.restore();
+		});
+
+		it("Adds full screen class in full screen mode.", () => {
+			const testOverlay = new Overlay('fullscreenClassTest', {html: 'hello', fullscreen: true});
+			testOverlay.open();
+			const overlayById = document.querySelector('#fullscreenClassTest');
+			proclaim.strictEqual(testOverlay.opts.trigger, overlayById.classList.contains('o-overlay--fullscreen'));
 		});
 
 		it("Disables document scrolling with an open full screen overlay.", (done) => {
