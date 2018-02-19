@@ -8,18 +8,18 @@ import Overlay from './../../main';
 
 describe("Overlay", () => {
 
+	beforeEach(() => {
+		fixtures.htmlCode();
+	});
+
+	afterEach(() => {
+		Object.values(Overlay.getOverlays()).forEach(overlay => {
+			overlay.destroy();
+		});
+		fixtures.reset();
+	});
+
 	describe("Constructor", () => {
-		beforeEach(() => {
-			fixtures.htmlCode();
-		});
-
-		afterEach(() => {
-			Object.values(Overlay.getOverlays()).forEach(overlay => {
-				overlay.destroy();
-			});
-			fixtures.reset();
-		});
-
 		it("Adds itself to the overlays array", () => {
 			let testOverlay = new Overlay('myID', {html: 'hello'});
 			proclaim.strictEqual(Overlay.getOverlays()['myID'], testOverlay);
@@ -107,7 +107,9 @@ describe("Overlay", () => {
 			const testOverlay = new Overlay('myID', {html: 'hello'});
 			proclaim.strictEqual(document.body, testOverlay.context);
 		});
+	});
 
+	describe("Open", () => {
 		it("Does not add state to history when not in full screen mode.", () => {
 			const testOverlay = new Overlay('myID', { html: 'hello', fullscreen: false });
 			testOverlay.open();
@@ -177,6 +179,23 @@ describe("Overlay", () => {
 			}, 10);
 		});
 	});
+
+	describe("Realign", () => {
+		it("Adds a height to overlay content if the overlay is larger than the viewport.", () => {
+			const contentHeight = '3000px';
+			const testOverlay = new Overlay('contentHeightTest', { html: 'hello' });
+			testOverlay.open();
+			const overlayContent = document.querySelector('.o-overlay--contentHeightTest .o-overlay__content');
+			// Demo sets no modal content so the modal is within the viewport, no content height should be set.
+			proclaim.equal(overlayContent.style.height, '');
+			// Model content now makes the modal larger than the viewport.
+			overlayContent.innerHTML = `<div style="height:${contentHeight};">Very long content.</div>`;
+			// Calling `realign` will now set a height so modal content is scrollable.
+			testOverlay.realign();
+			proclaim.equal(overlayContent.style.height, contentHeight);
+		});
+	});
+
 });
 
 /* Functions to unit test
