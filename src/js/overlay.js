@@ -418,7 +418,7 @@ Overlay.prototype.closeOnNewLayer = function(ev) {
 
 Overlay.prototype.resizeListener = function(ev) {
 	if (!this.wrapper.contains(ev.target)) {
-		this.respondToWindow(ev.detail.viewport);
+		this.respondToWindow();
 	}
 };
 
@@ -458,7 +458,7 @@ Overlay.prototype.realign = function(dimension, size) {
 
 Overlay.prototype._align = function (dimension, size) {
 
-	if (dimension != 'width' && dimension != 'height') {
+	if (dimension !== 'width' && dimension !== 'height') {
 		throw new Error(`Can not realign the overlay for the dimension "${dimension}". "height" or "width" expected.`);
 	}
 
@@ -499,9 +499,9 @@ Overlay.prototype._align = function (dimension, size) {
 		// margin would be incorrect
 		this.wrapper.style[edge] = '50%';
 	}
-}
+};
 
-Overlay.prototype.respondToWindow = function(size) {
+Overlay.prototype.respondToWindow = function() {
 	this.realign();
 };
 
