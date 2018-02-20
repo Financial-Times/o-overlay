@@ -120,7 +120,7 @@ describe("Overlay", () => {
 			const testOverlay = new Overlay('myID', { html: 'hello', fullscreen: false, modal: false });
 			testOverlay.open();
 			setTimeout(() => {
-				const overlfow = document.body.style.overflow;
+				const overlfow = document.documentElement.style.overflow;
 				proclaim.equal(overlfow, '');
 				done();
 			}, 10);
@@ -157,13 +157,13 @@ describe("Overlay", () => {
 		it("Disables document scrolling with an open modal overlay.", () => {
 			const testOverlay = new Overlay('modalScrollTest', { html: 'hello', modal: true, fullscreen: false});
 			testOverlay.open();
-			proclaim.equal(document.body.style.overflow, 'hidden');
+			proclaim.equal(document.documentElement.style.overflow, 'hidden');
 		});
 
 		it("Disables document scrolling with an open fullscreen overlay.", () => {
 			const testOverlay = new Overlay('fullscreenScrollTest', { html: 'hello', modal: false, fullscreen: true});
 			testOverlay.open();
-			proclaim.equal(document.body.style.overflow, 'hidden');
+			proclaim.equal(document.documentElement.style.overflow, 'hidden');
 		});
 
 		it("Adds custom classes to the overlay.", (done) => {
