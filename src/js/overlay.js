@@ -133,8 +133,8 @@ const Overlay = function(id, opts) {
 Overlay.prototype.open = function() {
 	// Prevent page scroll for open modals or fullscreen overlays.
 	if (this.opts.modal || this.opts.fullscreen) {
-		this.originalOverflow = document.body.style.overflow;
-		document.body.style.overflow = 'hidden';
+		this.originalOverflow = document.documentElement.style.overflow;
+		document.documentElement.style.overflow = 'hidden';
 	}
 
 	// A full screen overlay can look like a new page so add to history.
@@ -354,7 +354,7 @@ Overlay.prototype.close = function() {
 
 	// Restore document scroll when modals or fullscreen overlays are closed.
 	if (this.opts.modal || this.opts.fullscreen) {
-		document.body.style.overflow = this.originalOverflow;
+		document.documentElement.style.overflow = this.originalOverflow;
 	}
 
 	// Remove fullscreen popstate handler and re-enable document scroll.
