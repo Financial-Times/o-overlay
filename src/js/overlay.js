@@ -148,7 +148,7 @@ Overlay.prototype.open = function() {
 		// Push overlay state to history.
 		window.history.pushState({ [`o-overlay-${this.id}`]: 'fullscreen' }, window.location.href);
 		// When history changes check for the overlay and close it.
-		this.popstateHandler = function (e) {
+		this.popstateHandler = function () {
 			if (window.history.state[`o-overlay-${this.id}`]) {
 				this.close();
 			}
