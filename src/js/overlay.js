@@ -91,7 +91,7 @@ const triggerClickHandler = function(id, ev) {
 const Overlay = function(id, opts) {
 	if (overlays[id]) {
 		// @todo Throw error in the next breaking.
-		console.warn(`o-overlay with id "${id}" already exists. Creating an overlay twice with the same id may result in unexpected behaviour.`);
+		console.warn(`o-overlay with id "${id}" already exists. Creating an overlay twice with the same id may result in unexpected behaviour. This will error in the next major release of o-overlay.`);
 	}
 
 	viewport.listenTo('resize');
