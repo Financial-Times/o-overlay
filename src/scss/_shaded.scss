@@ -6,8 +6,9 @@
 /// Add to the header for a shaded overlay
 @mixin oOverlayHeadingShaded {
 	@include oBrandConfigureFor('o-overlay')  {
-		background: oBrandGet('shaded-heading-background')
-		color: oBrandGet('shaded-heading-text')
+		background: oBrandGet('shaded-heading-background');
+		color: oBrandGet('shaded-heading-text');
+		border-color: oBrandGet('shaded-heading-border');
 		font-weight: normal;
 		// sass-lint:disable no-vendor-prefixes
 		-webkit-font-smoothing: antialiased;
