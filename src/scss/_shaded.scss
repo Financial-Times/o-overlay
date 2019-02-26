@@ -21,15 +21,19 @@
 	background-color: _oOverlayGet('shaded-close-background');
 	border-color: _oOverlayGet('shaded-close-border');
 
+	&:hover,
 	&:focus {
 		@include _oOverlayCloseIcon(_oOverlayGet('default-close-text'));
 		background-color: _oOverlayGet('default-close-background');
 	}
 
 	&:hover {
-		@media (hover) {
-			@include _oOverlayCloseIcon(_oOverlayGet('default-close-text'));
-			background-color: _oOverlayGet('default-close-background');
+		// Do not show the hover state to primarily touch based devices.
+		// IE11 does not support the hover media query, so we have to remove hover
+		// styles for touch devices rather than add them for non-touch.
+		@media (hover: none) {
+			background-image: unset; // Unset the icon. See _oOverlayCloseIcon.
+			background-color: unset;
 		}
 	}
 }
