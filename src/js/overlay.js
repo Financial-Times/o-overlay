@@ -572,3 +572,4 @@ Overlay.getOverlays = function() {
 };
 
 export default Overlay;
+export { Overlay };
