@@ -228,8 +228,6 @@ Overlay.prototype.render = function() {
 		if (!this.opts.preventclosing) {
 			const button = document.createElement('button');
 			button.className = 'o-overlay__close';
-			button.setAttribute('role', 'button');
-			button.setAttribute('href', '#void');
 			button.setAttribute('aria-label', 'Close');
 			button.setAttribute('title', 'Close');
 			if (!this.opts.nofocus) {
