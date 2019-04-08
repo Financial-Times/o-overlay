@@ -8,10 +8,6 @@
 	background: _oOverlayGet('shaded-heading-background');
 	color: _oOverlayGet('shaded-heading-text');
 	border-color: _oOverlayGet('shaded-heading-border');
-	font-weight: normal;
-	// sass-lint:disable no-vendor-prefixes
-	-webkit-font-smoothing: antialiased;
-	// sass-lint:disable no-vendor-prefixes
 }
 
 /// Add to the close icon for a shaded overlay

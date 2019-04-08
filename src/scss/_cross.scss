@@ -6,21 +6,19 @@
 /// Base overlay close style
 @mixin oOverlayClose {
 	@include _oOverlayCloseIcon(_oOverlayGet('default-close-text'));
-	box-sizing: content-box;
-	float: right;
+	margin: oTypographySpacingSize(3);
+	margin-left: oTypographySpacingSize(5);
 	position: relative;
-	margin-top: 10px; // Align with the text baseline (magic number)
-	margin-right: 10px; // Same right spacing as the top one
-	margin-left: 10px;
-	margin-bottom: 10px;
-	width: 20px;
-	height: 20px;
-	padding: 0.25em;
+	float: right;
+	// start: undo browser button styles
+	appearance: none;
+	color: inherit;
+	border: 0;
+	padding: 0;
+	font: inherit;
 	cursor: pointer;
-	font-size: 8px;
-	line-height: 1;
-	user-select: none;
-
+	outline: inherit;
+	// end: undo button styles
 	// Increase hit zone of the button around it for better usability
 	&:after {
 		position: absolute;
@@ -33,6 +31,5 @@
 }
 
 @mixin _oOverlayCloseIcon($color) {
-	@include oIconsGetIcon('cross', $color, $container-width: 20, $iconset-version: 1);
-	background-size: contain;
+	@include oIconsGetIcon('cross', $color, $container-width: 24, $iconset-version: 1);
 }

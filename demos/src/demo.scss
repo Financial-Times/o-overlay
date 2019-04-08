@@ -2,7 +2,6 @@ $o-overlay-is-silent: false;
 @import "../../main";
 
 body {
-	font-family: if(oBrandGetCurrentBrand() == 'whitelabel', Arial, MetricWeb); // todo, use o-fonts or o-typography in the next major
 	padding: 10px;
 	min-height: 500px;
 }
@@ -18,8 +17,4 @@ body {
 .demo-overlay {
 	width: 100%;
 	max-width: 500px;
-}
-
-strong {
-	font-weight: 600;
 }

@@ -11,6 +11,7 @@
   ],
   "dependencies": {
     "ftdomdelegate": "^3.0.0",
+    "o-typography": "^5.10.1",
     "o-colors": "^4.0.0",
     "o-icons": "^5.10.0",
     "o-normalise": "^1.2.1",

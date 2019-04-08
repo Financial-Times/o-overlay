@@ -227,7 +227,7 @@ Overlay.prototype.render = function() {
 		}
 
 		if (!this.opts.preventclosing) {
-			const button = document.createElement('a');
+			const button = document.createElement('button');
 			button.className = 'o-overlay__close';
 			button.setAttribute('role', 'button');
 			button.setAttribute('href', '#void');

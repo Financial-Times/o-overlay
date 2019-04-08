@@ -11,7 +11,7 @@
 	box-sizing: border-box;
 	opacity: 1;
 	transition: opacity 0.3s ease-in-out;
-	border: $_o-overlay-border-width solid _oOverlayGet('default-border');
+	border: 1px solid _oOverlayGet('default-border');
 	background: _oOverlayGet('default-background');
 	border-radius: $o-normalise-border-radius;
 }
@@ -31,7 +31,7 @@
 
 /// Base overlay heading style
 @mixin oOverlayHeading {
-	font-size: 20px;
+	@include oTypographySans($scale: 2);
 	margin: 0;
 	overflow: hidden;
 	background: _oOverlayGet('heading-background');
@@ -40,18 +40,20 @@
 
 /// Base overlay title style
 @mixin oOverlayTitle {
-	margin: 10px 10px 10px 20px;
+	@include oTypographySans($scale: 2);
+	margin: oTypographySpacingSize(3);
+	margin-left: oTypographySpacingSize(5);
 	display: block;
-	line-height: 25px;
 	overflow: auto;
 }
 
 /// Base overlay content style
 @mixin oOverlayContent {
+	@include oTypographySans($scale: 0);
 	position: relative;
 	box-sizing: border-box;
 	overflow: auto;
-	padding: 20px;
+	padding: oTypographySpacingSize(5);
 
 	> *:first-child {
 		margin-top: 0;

@@ -5,23 +5,23 @@
 
 /// Add to the header for a compact overlay
 @mixin oOverlayCompactHeading {
-	font-size: 16px;
+	@include oTypographySans($scale: 0);
 }
 
 /// Add to the title for a compact overlay
 @mixin oOverlayCompactTitle {
-	margin-top: 8px; // Actually 10px - line-height adds some space too
-	margin-bottom: 5px;
-	margin-left: 10px;
-	line-height: 16px;
+	@include oTypographySans($scale: 0);
+	margin: oTypographySpacingSize(1);
+	margin-left: oTypographySpacingSize(2);
 }
 
 /// Add to the close button for a compact overlay
 @mixin oOverlayCompactClose {
-	margin: 5px 5px 5px 10px;
+	margin: oTypographySpacingSize(1);
+	margin-left: oTypographySpacingSize(2);
 }
 
 /// Add to the content section for a compact overlay
 @mixin oOverlayCompactContent {
-	padding: 10px;
+	padding: oTypographySpacingSize(2);
 }
