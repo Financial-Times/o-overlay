@@ -39,9 +39,9 @@ describe("Overlay", () => {
 
 		it("Errors if html or src are not passed in as opts", () => {
 			proclaim.throws(new Overlay('myID', {}));
-			proclaim.throws(new Overlay('myID', {somethingElse: "hello"}));
-			proclaim.isTypeOf(new Overlay('myID', {html: "hello"}), 'object');
-			proclaim.isTypeOf(new Overlay('myID', {src: "hello"}), 'object');
+			proclaim.throws(new Overlay('myID2', {somethingElse: "hello"}));
+			proclaim.isTypeOf(new Overlay('myID3', {html: "hello"}), 'object');
+			proclaim.isTypeOf(new Overlay('myID4', {src: "hello"}), 'object');
 		});
 
 		it("Converts trigger to a HTMLElement if it's a string", () => {
@@ -51,10 +51,15 @@ describe("Overlay", () => {
 		});
 
 		it("Throws if a heading is set but not a non empty title", () => {
-			proclaim.throws(() => { new Overlay('myID', {html: 'hello', heading: {title: ''}}); });
-			proclaim.throws(() => { new Overlay('myID', {html: 'hello', heading: {title: ' '}}); });
-			proclaim.throws(() => { new Overlay('myID', {html: 'hello', heading: {title: {}}}); });
-			proclaim.isTypeOf(new Overlay('myID', {html: 'hello', heading:  {title: 'hello'}}), 'object');
+			proclaim.throws(() => { new Overlay('myID1', {html: 'hello', heading: {title: ''}}); });
+			proclaim.throws(() => { new Overlay('myID2', {html: 'hello', heading: {title: ' '}}); });
+			proclaim.throws(() => { new Overlay('myID3', {html: 'hello', heading: {title: {}}}); });
+			proclaim.isTypeOf(new Overlay('myID4', {html: 'hello', heading:  {title: 'hello'}}), 'object');
+		});
+
+		it("Throws if an overlay is created with an id which already exists", () => {
+			new Overlay('myID', {});
+			proclaim.throws(() => { new Overlay('myID', {}); });
 		});
 
 		it("Sets the overlay to be modal by default", () => {
@@ -68,8 +73,8 @@ describe("Overlay", () => {
 		});
 
 		it("Throws if compact and heading and shaded are set", () => {
-			proclaim.throws(() => { new Overlay('myID', {html: 'hello', compact: true, heading: {title: 'hello', shaded: true}}); });
-			proclaim.isTypeOf(new Overlay('myID', {html: 'hello', heading: {title: 'hello', shaded: true}}), 'object');
+			proclaim.throws(() => { new Overlay('myID1', {html: 'hello', compact: true, heading: {title: 'hello', shaded: true}}); });
+			proclaim.isTypeOf(new Overlay('myID2', {html: 'hello', heading: {title: 'hello', shaded: true}}), 'object');
 		});
 
 		it("Throws if no id is passed in", () => {
