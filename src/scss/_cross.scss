@@ -3,15 +3,6 @@
 /// @link http://registry.origami.ft.com/components/o-overlay
 ////
 
-/// Helper mixin to target IE8
-///
-/// @access private
-@mixin _oOverlayTargetIE8 {
-	@media \0screen {
-		@content;
-	}
-}
-
 /// Base overlay close style
 @mixin oOverlayClose {
 	@include _oOverlayCloseIcon(_oOverlayGet('default-close-text'));
