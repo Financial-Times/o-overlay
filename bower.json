@@ -14,7 +14,7 @@
     "o-colors": "^4.0.0",
     "o-icons": ">=4.0.0 <6.0.0",
     "o-normalise": "^1.2.1",
-    "o-layers": ">=0.2.0 <3",
+    "o-layers": "^2.1.0",
     "o-viewport": ">=0.1.1 <4",
     "o-visual-effects": "^2.0.0",
     "o-brand": "^3.2.3"
