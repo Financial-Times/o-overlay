@@ -12,7 +12,7 @@
   "dependencies": {
     "ftdomdelegate": "^3.0.0",
     "o-colors": "^4.0.0",
-    "o-icons": ">=4.0.0 <6.0.0",
+    "o-icons": "^5.10.0",
     "o-normalise": "^1.2.1",
     "o-layers": "^2.1.0",
     "o-viewport": "^3.3.2",
