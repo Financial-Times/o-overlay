@@ -18,6 +18,7 @@
 	"keywords": "interstitial messaging modal popover notification hover",
 	"browserFeatures": {
 		"required": [
+			"array.from",
 			"es5object",
 			"es5string",
 			"classlist",
