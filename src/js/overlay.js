@@ -72,7 +72,7 @@ const isVisible = function (element) {
 
 const focusTrap = function(event) {
 	const tabKeyCode = 9;
-	const overlayFocusableElements = Array.from(
+	const overlayFocusableElements = [].slice.call(
 		this.wrapper.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')
 	).filter(element => isVisible(element) && !element.disabled);
 
