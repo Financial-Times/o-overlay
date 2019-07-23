@@ -34,7 +34,8 @@
 		"dependencies": [
 			"o-fonts@^3.0.0",
 			"o-buttons@^5.0.0",
-			"o-normalise@^1.0.0"
+			"o-normalise@^1.0.0",
+			"o-forms"
 		]
 	},
 	"demos": [
