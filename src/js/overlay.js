@@ -76,6 +76,9 @@ const focusTrap = function(event) {
 		this.wrapper.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')
 	).filter(element => {
 		const elementVisible = isVisible(element);
+		// Inputs for radio and checkboxes are visually hidden, 
+		// so check the label visibility of inputs too when determining
+		// whether to trap focus.
 		const elementLabelVisible = element.labels && [].slice.call(element.labels).some(l => isVisible(l));
 		// When tabbing, the checked radio input of a group is focused, not each radio input.
 		const elementIsUncheckedRadio = element.type === 'radio' && element.checked !== true;
