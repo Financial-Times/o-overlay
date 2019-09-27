@@ -15,6 +15,13 @@
 /// Base overlay close style
 @mixin oOverlayClose {
 	@include _oOverlayCloseIcon(_oOverlayGet('default-close-text'));
+	// start: undo button styles
+	appearance: none;
+	border: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+	// end: undo button styles
 	box-sizing: content-box;
 	float: right;
 	position: relative;
