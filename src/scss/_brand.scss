@@ -1,3 +1,6 @@
+/// @group o-overlay
+/// @link http://registry.origami.ft.com/components/o-overlay
+
 /// Helper for `o-brand` function.
 /// @access private
 @function _oOverlayGet($variables, $from: null) {
@@ -27,7 +30,11 @@
 			shaded-close-text: oColorsGetPaletteColor('white'),
 			shaded-close-border: oColorsGetPaletteColor('white')
 		),
-		'supports-variants': ()
+		'supports-variants': (
+			'compact',
+			'full-screen',
+			'heading-shaded'
+		)
 	));
 }
 
@@ -48,7 +55,11 @@
 			shaded-close-text: oColorsGetPaletteColor('white'),
 			shaded-close-border: oColorsGetPaletteColor('white')
 		),
-		'supports-variants': ()
+		'supports-variants': (
+			'compact',
+			'full-screen',
+			'heading-shaded'
+		)
 	));
 }
 
@@ -69,6 +80,10 @@
 			shaded-close-text: oColorsGetPaletteColor('white'),
 			shaded-close-border: oColorsGetPaletteColor('white')
 		),
-		'supports-variants': ()
+		'supports-variants': (
+			'compact',
+			'full-screen',
+			'heading-shaded'
+		)
 	));
 }
