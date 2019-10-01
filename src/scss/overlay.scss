@@ -31,7 +31,7 @@
 		@include oOverlayContentClose();
 	}
 	.o-overlay__content {
-		@include oOverlayContentBody();
+		@include _oOverlayContentBody();
 	}
 }
 
@@ -79,8 +79,8 @@
 /// Outputs styles for the overlay body.
 ///
 /// @output The output does not include a class definition, and should be wrapped in a selector.
-/// @access public
-@mixin oOverlayContentBody {
+/// @access private
+@mixin _oOverlayContentBody {
 	position: relative;
 	box-sizing: border-box;
 	overflow: auto;

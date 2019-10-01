@@ -11,6 +11,7 @@
   - `oOverlayCompactContent`
   - `oOverlayCompactHeading`
   - `oOverlayCompactTitle`
+  - `oOverlayContent`
   - `oOverlayFullscreen`
   - `oOverlayHeading`
   - `oOverlayHeadingShaded`
@@ -20,7 +21,6 @@
   - `oOverlayTitle`
 - Rename:
   - `oOverlayClose` to `oOverlayContentClose`
-  - `oOverlayContent` to `oOverlayContentBody`
 
 ### ES Modules
 
