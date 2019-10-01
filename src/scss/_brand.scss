@@ -7,12 +7,6 @@
     @return oBrandGet($component: 'o-overlay', $variables: $variables, $from: $from);
 }
 
-/// Helper for `o-brand` function.
-/// @access private
-@function _oOverlaySupports($variant) {
-    @return oBrandSupportsVariant($component: 'o-overlay', $variant: $variant);
-}
-
 @if oBrandGetCurrentBrand() == 'master' {
 	@include oBrandDefine('o-overlay', 'master', (
 		'variables': (
@@ -30,11 +24,7 @@
 			shaded-close-text: oColorsGetPaletteColor('white'),
 			shaded-close-border: oColorsGetPaletteColor('white')
 		),
-		'supports-variants': (
-			'compact',
-			'full-screen',
-			'heading-shaded'
-		)
+		'supports-variants': ()
 	));
 }
 
@@ -55,11 +45,7 @@
 			shaded-close-text: oColorsGetPaletteColor('white'),
 			shaded-close-border: oColorsGetPaletteColor('white')
 		),
-		'supports-variants': (
-			'compact',
-			'full-screen',
-			'heading-shaded'
-		)
+		'supports-variants': ()
 	));
 }
 
@@ -80,10 +66,6 @@
 			shaded-close-text: oColorsGetPaletteColor('white'),
 			shaded-close-border: oColorsGetPaletteColor('white')
 		),
-		'supports-variants': (
-			'compact',
-			'full-screen',
-			'heading-shaded'
-		)
+		'supports-variants': ()
 	));
 }

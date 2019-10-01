@@ -33,17 +33,17 @@
 	@include _oOverlayBase();
 
 	// Include the shaded heading variant
-	@if index($variants, 'heading-shaded') and _oOverlaySupports('heading-shaded') {
+	@if index($variants, 'heading-shaded') {
 		@include _oOverlayHeadingShaded();
 	}
 
 	// Include the compact variant
-	@if index($variants, 'compact') and _oOverlaySupports('compact') {
+	@if index($variants, 'compact') {
 		@include _oOverlayCompact();
 	}
 
 	// Include the full-screen variant
-	@if index($variants, 'full-screen') and _oOverlaySupports('full-screen') {
+	@if index($variants, 'full-screen') {
 		@include _oOverlayFullScreen();
 	}
 }
