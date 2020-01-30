@@ -43,15 +43,15 @@
 v5 uses [ES Modules over CommonJS](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) syntax. We recommend to include `o-overlay` using the es modules syntax.
 
 ```diff
--const Overlay = require('o-overlay');
-+import Overlay from 'o-overlay';
+-const Overlay = require('@financial-times/o-overlay');
++import Overlay from '@financial-times/o-overlay';
 ```
 
 However to use the CommonJS syntax, without a plugin like [babel-plugin-transform-es2015-modules-commonjs](https://babeljs.io/docs/en/babel-plugin-transform-es2015-modules-commonjs), add `.default` to access `o-overlay` methods.
 
 ```diff
--const Overlay = require('o-overlay');
-+const Overlay = require('o-overlay').default;
+-const Overlay = require('@financial-times/o-overlay');
++const Overlay = require('@financial-times/o-overlay').default;
 ```
 
 ### CSS
