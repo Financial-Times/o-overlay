@@ -3,7 +3,7 @@
 	"keywords": [ "overlay" , "modal", "interstitial", "messaging", "popover", "notification", "hover"],
 	"origamiType": "module",
 	"origamiCategory": "components",
-	"origamiVersion": 1,
+	"origamiVersion": 2,
 	"brands" : [
 		"master",
 		"internal",
