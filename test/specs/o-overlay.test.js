@@ -3,7 +3,7 @@
 
 import * as fixtures from '../helpers/fixtures.js';
 
-import oLayers from 'o-layers';
+import oLayers from '@financial-times/o-layers';
 import Overlay from './../../main.js';
 
 describe("Overlay", () => {

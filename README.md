@@ -102,13 +102,13 @@ JavaScript is initialised on `o-overlay` elements automatically for [Origami Bui
 
 For example call the `init` method to initialise all `o-overlay` instances in the document:
 ```js
-import oOverlay from 'o-overlay';
+import oOverlay from '@financial-times/o-overlay';
 oOverlay.init();
 ```
 
 Or pass an element to initialise a specific `o-overlay` instance:
 ```js
-import oOverlay from 'o-overlay';
+import oOverlay from '@financial-times/o-overlay';
 const oOverlayElement = document.getElementById('#my-o-overlay-element');
 oOverlay.init(oOverlayElement);
 ```
