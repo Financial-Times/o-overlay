@@ -12,20 +12,20 @@
     },
     "browser": "main.js",
     "peerDependencies": {
-        "@financial-times/o-brand": "^100.0.0-6",
-        "@financial-times/o-colors": "^100.0.0-6",
-        "@financial-times/o-icons": "^100.0.0-6",
-        "@financial-times/o-layers": "^100.0.0-6",
-        "@financial-times/o-normalise": "^100.0.0-6",
-        "@financial-times/o-spacing": "^100.0.0-6",
-        "@financial-times/o-typography": "^100.0.0-6",
-        "@financial-times/o-viewport": "^100.0.0-6",
-        "@financial-times/o-visual-effects": "^100.0.0-6",
-        "ftdomdelegate": "^100.0.0-6"
+        "@financial-times/o-brand": "^100.0.0-7",
+        "@financial-times/o-colors": "^100.0.0-7",
+        "@financial-times/o-icons": "^100.0.0-7",
+        "@financial-times/o-layers": "^100.0.0-7",
+        "@financial-times/o-normalise": "^100.0.0-7",
+        "@financial-times/o-spacing": "^100.0.0-7",
+        "@financial-times/o-typography": "^100.0.0-7",
+        "@financial-times/o-viewport": "^100.0.0-7",
+        "@financial-times/o-visual-effects": "^100.0.0-7",
+        "ftdomdelegate": "^100.0.0-7"
     },
     "description": "Configurable custom overlay box that can be used to show overlay windows. The overlays can also be switched to display differently on small screens",
     "publishConfig": {
         "registry": "http://localhost:4873"
     },
-    "version": "100.0.0-6"
+    "version": "100.0.0-7"
 }
