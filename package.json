@@ -1,5 +1,8 @@
 {
     "name": "@financial-times/o-overlay",
+    "version": "100.0.0-7",
+    "description": "Configurable custom overlay box that can be used to show overlay windows. The overlays can also be switched to display differently on small screens",
+    "browser": "main.js",
     "devDependencies": {
         "eslint": "^7.8.1",
         "eslint-config-origami-component": "^2.1.0",
@@ -10,7 +13,6 @@
         "stylelint": "^13.7.0",
         "stylelint-config-origami-component": "^1.0.4"
     },
-    "browser": "main.js",
     "peerDependencies": {
         "@financial-times/o-brand": "^100.0.0-7",
         "@financial-times/o-colors": "^100.0.0-7",
@@ -23,9 +25,7 @@
         "@financial-times/o-visual-effects": "^100.0.0-7",
         "ftdomdelegate": "^100.0.0-7"
     },
-    "description": "Configurable custom overlay box that can be used to show overlay windows. The overlays can also be switched to display differently on small screens",
     "publishConfig": {
         "registry": "http://localhost:4873"
-    },
-    "version": "100.0.0-7"
+    }
 }
