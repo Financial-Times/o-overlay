@@ -1,5 +1,11 @@
 # o-overlay [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](#licence)
 
+***
+
+**This component has moved to the [Origami Component System](https://github.com/Financial-Times/origami).**
+
+***
+
 Configurable custom overlay box that can be used to show overlay windows. The overlays can also be switched to display differently on small screens.
 
 - [Usage](#usage)
